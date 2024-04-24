@@ -1,18 +1,17 @@
-class Gryffindor extends Student {
+class Gryffindor {
     int nobility;
     int honor;
     int bravery;
 
-    public Gryffindor(String name, int magicPower, int transgressionDistance, int nobility, int honor, int bravery) {
-        super(name, magicPower, transgressionDistance);
+    public Gryffindor(int nobility, int honor, int bravery) {
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
     }
 
-    public void compareStudents(Gryffindor student1, Gryffindor student2) {
-        int score1 = student1.nobility + student1.honor + student1.bravery;
-        int score2 = student2.nobility + student2.honor + student2.bravery;
+    public void compareStudents(Student student1, Student student2) {
+        int score1 = student1.magicPower + student1.transgressionDistance + nobility + honor + bravery;
+        int score2 = student2.magicPower + student2.transgressionDistance + nobility + honor + bravery;
 
         if (score1 > score2)
             System.out.println(student1.name + " is a better Gryffindor student than " + student2.name);

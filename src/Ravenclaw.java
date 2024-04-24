@@ -1,22 +1,19 @@
-class Ravenclaw extends Student {
+class Ravenclaw {
     int intelligence;
     int wisdom;
     int wit;
     int creativity;
 
-    public Ravenclaw(String name, int magicPower, int transgressionDistance, int intelligence, int wisdom, int wit, int creativity) {
-        super(name, magicPower, transgressionDistance);
+    public Ravenclaw(int intelligence, int wisdom, int wit, int creativity) {
         this.intelligence = intelligence;
         this.wisdom = wisdom;
         this.wit = wit;
         this.creativity = creativity;
     }
 
-    public void compareStudents(Ravenclaw student1, Ravenclaw student2) {
-        int score1 = student1.magicPower + student1.transgressionDistance +
-                student1.intelligence + student1.wisdom + student1.wit + student1.creativity;
-        int score2 = student2.magicPower + student2.transgressionDistance +
-                student2.intelligence + student2.wisdom + student2.wit + student2.creativity;
+    public void compareStudents(Student student1, Student student2) {
+        int score1 = student1.magicPower + student1.transgressionDistance + intelligence + wisdom + wit + creativity;
+        int score2 = student2.magicPower + student2.transgressionDistance + intelligence + wisdom + wit + creativity;
 
         if (score1 > score2)
             System.out.println(student1.name + " is a better Ravenclaw student than " + student2.name);
